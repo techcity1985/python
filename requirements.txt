@@ -1,0 +1,47 @@
+# Data Analysis and Manipulation
+numpy
+pandas
+scipy
+
+# Data Visualization
+matplotlib
+seaborn
+plotly
+
+# Machine Learning and Deep Learning
+scikit-learn
+tensorflow
+keras
+torch  # PyTorch
+
+# Web Development
+flask
+django
+
+# Web Scraping
+requests
+beautifulsoup4
+scrapy
+
+# Database Interaction
+sqlalchemy
+pymongo
+psycopg2
+
+# Development and Testing
+jupyterlab
+pytest
+black
+flake8
+
+# General Utilities
+os  # Note: os, sys, datetime, and json are part of the Python standard library and do not need to be installed via pip.
+sys
+datetime
+json
+
+# Others
+opencv-python
+pillow
+nltk
+spacy
