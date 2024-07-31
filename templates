@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .calculator {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .calculator h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .calculator form {
+            display: flex;
+            flex-direction: column;
+        }
+        .calculator input, .calculator select, .calculator button {
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .calculator button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .calculator button:hover {
+            background-color: #218838;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculator</h1>
+        <form action="/calculate" method="POST">
+            <input type="number" name="num1" step="any" placeholder="Enter first number" required>
+            <input type="number" name="num2" step="any" placeholder="Enter second number" required>
+            <select name="operation">
+                <option value="add">Add</option>
+                <option value="subtract">Subtract</option>
+                <option value="multiply">Multiply</option>
+                <option value="divide">Divide</option>
+                <option value="modulus">Modulus</option>
+                <option value="exponentiate">Exponentiate</option>
+            </select>
+            <button type="submit">Calculate</button>
+        </form>
+        {% if result is not none %}
+        <div class="result">
+            Result: {{ result }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
